@@ -3,40 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة التاريخ والجغرافيا</title>
+    <title>موقع الأستاذ رياض سليمي - الفضاء التفاعلي</title>
     <style>
-        body { font-family: 'Cairo', sans-serif; background: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 90%; max-width: 400px; text-align: center; }
-        input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; text-align: center; }
-        button { width: 100%; padding: 12px; background: #2980b9; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        body { font-family: Tahoma, Arial, sans-serif; background-color: #f4f6f9; color: #333; text-align: center; padding: 30px 15px; margin: 0; }
+        .container { max-width: 700px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        /* تنسيق شاشة القفل */
+        #login-screen { padding: 40px 0; }
+        #passcode { width: 100%; max-width: 300px; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px; text-align: center; font-size: 16px; }
+        #login-btn { padding: 12px 30px; background-color: #1e3a8a; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        
+        /* تنسيق المحتوى بعد الدخول */
         #main-content { display: none; }
-        .request-link { margin-top: 15px; display: block; color: #e74c3c; text-decoration: none; font-size: 14px; }
+        h1 { color: #1e3a8a; margin-bottom: 5px; font-size: 24px; }
+        h2 { color: #2563eb; font-size: 18px; margin-top: 30px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px; text-align: right; }
+        h3 { color: #4b5563; font-size: 15px; margin-top: 20px; text-align: right; }
+        .btn { display: block; width: 100%; box-sizing: border-box; margin: 8px 0; background-color: #d97706; color: white; padding: 12px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; text-align: center; }
+        .btn:hover { background-color: #b45309; }
+        .btn-library { background-color: #059669; }
+        .copyright-box { background-color: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 12px; border-radius: 6px; margin-top: 25px; font-size: 13px; text-align: right; line-height: 1.6; }
+        .footer { margin-top: 20px; font-size: 13px; color: #777; }
+        .request-link { display: block; margin-top: 15px; color: #e74c3c; font-size: 14px; text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <div class="card" id="login-screen">
-        <h2>منصة التاريخ والجغرافيا</h2>
-        <p>الرجاء إدخال الرمز السري للولوج</p>
-        <input type="password" id="passcode" placeholder="أدخل الرمز السري...">
-        <button onclick="checkPassword()">دخول</button>
-        <a class="request-link" href="mailto:slimir334@gmail.com?subject=طلب الرمز السري&body=أريد طلب الرمز السري للمنصة.">طلب الرمز السري عبر البريد</a>
+    <!-- شاشة تسجيل الدخول -->
+    <div class="container" id="login-screen">
+        <h2>منصة الأستاذ رياض سليمي</h2>
+        <p>الرجاء إدخال الرمز السري الخاص بك للولوج إلى الفضاء التفاعلي</p>
+        <input type="password" id="passcode" placeholder="أدخل رمزك السري هنا...">
+        <button id="login-btn" onclick="checkPassword()">دخول للموقع</button>
+        <a class="request-link" href="mailto:slimir334@gmail.com?subject=طلب%20رمز%20دخول%20للمنصة&body=السلام%20عليكم%20أستاذ،%20أريد%20طلب%20رمز%20سري%20خاص.%0Aالاسم%20واللقب:%0Aالمستوى:%20الأولى%20ثانوي">لا تملك رمزاً خاصاً؟ اضغط هنا لطلبه عبر الإيميل</a>
     </div>
 
-    <div class="card" id="main-content">
-        <h1>أهلاً بك في منصة التاريخ والجغرافيا</h1>
-        <p>دروس السنة الأولى ثانوي: يمكنك تحميل الوثائق والخرائط هنا.</p>
+    <!-- المحتوى الفعلي (مخفي حتى يتم إدخال الرمز الصحيح) -->
+    <div class="container" id="main-content">
+        <h1>موقع الأستاذ رياض سليمي</h1>
+        <p>الفضاء التربوي التفاعلي - التاريخ والجغرافيا</p>
+
+        <h2>مكتبة الموارد</h2>
+        <a href="resources.html" class="btn btn-library">🗂️ الدخول إلى مكتبة الخرائط والوثائق</a>
+
+        <h2>قسم السنة الأولى ثانوي</h2>
+        <h3>دروس التاريخ:</h3>
+        <a href="https://riadh2017-ctrl.github.io/cartagekososiathadaria/" class="btn">الخصوصيات الحضارية لقرطاج البونية</a>
+        <a href="https://riadh2017-ctrl.github.io/Cartage-alminaa/" class="btn">قرطاج البونية: الميناء والتوسع التجاري</a>
+        <a href="https://riadh2017-ctrl.github.io/Hannibal/" class="btn">عبقرية القائد العسكري حنبعل</a>
+        <a href="https://riadh2017-ctrl.github.io/alizdiharalimrani/" class="btn">الازدهار العمراني لقرطاج الرومانية</a>
+        <a href="https://riadh2017-ctrl.github.io/alizdiharalfilahi/" class="btn">الازدهار الاقتصادي والفلاحة</a>
+        <a href="https://riadh2017-ctrl.github.io/kiddisaugustinos/" class="btn">حياة وأفكار القديس أوغسطينوس</a>
+        <a href="https://riadh2017-ctrl.github.io/kayrawaninticharislam/" class="btn">دور القيروان كقاعدة للانتشار</a>
+        <a href="https://riadh2017-ctrl.github.io/Kayrawanatijara/" class="btn">الدور الاقتصادي للقيروان</a>
+        <a href="https://riadh2017-ctrl.github.io/jamaaokbaibnjazar/" class="btn">خصائص العمارة الإسلامية في القيروان</a>
+        <a href="https://riadh2017-ctrl.github.io/Imaratmadinettounes/" class="btn">العهد الحفصي وعمارة مدينة تونس</a>
+
+        <h3>دروس الجغرافيا:</h3>
+        <a href="https://riadh2017-ctrl.github.io/oulathanawigeo/" class="btn">الوحدة 1: التوزيع الجغرافي للسكان</a>
+
+        <div class="copyright-box">
+            <b>تنبيه هام وحماية قانونية:</b><br>
+            جميع الموارد التفاعلية في هذا الموقع هي ملكية فكرية للأستاذ <b>رياض سليمي</b>. يمنع إعادة نشرها أو استغلالها تجارياً. للتواصل: <b>slimir334@gmail.com</b>
+        </div>
+
+        <div class="footer">
+            جميع الحقوق محفوظة © 2026 الأستاذ رياض سليمي
+        </div>
     </div>
 
     <script>
+        // قائمة الأكواد المسموح لها بالدخول (يمكنك إضافة أي عدد من الرموز هنا مفصولة بفواصل)
+        const allowedPasswords = [
+            "a2017mrr",  // الرمز الرئيسي الخاص بك
+            "med2026",   // رمز تلميذ
+            "mariam7a"   // رمز تلميذة أخرى
+        ];
+
         function checkPassword() {
-            if (document.getElementById('passcode').value === "a2017mrr") {
+            const enteredPass = document.getElementById('passcode').value.trim();
+            
+            if (allowedPasswords.includes(enteredPass)) {
                 document.getElementById('login-screen').style.display = 'none';
                 document.getElementById('main-content').style.display = 'block';
             } else {
-                alert('الرمز السري غير صحيح.');
+                alert('عذراً، هذا الرمز غير صحيح أو غير مفعل. يرجى مراجعة الأستاذ.');
             }
         }
     </script>
 </body>
 </html>
+
