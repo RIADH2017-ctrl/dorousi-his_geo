@@ -2,30 +2,37 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة التاريخ والجغرافيا</title>
     <style>
         body { font-family: 'Cairo', sans-serif; background: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .login-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 90%; max-width: 400px; text-align: center; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 90%; max-width: 400px; text-align: center; }
         input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; text-align: center; }
         button { width: 100%; padding: 12px; background: #2980b9; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        #main-content { display: none; }
         .request-link { margin-top: 15px; display: block; color: #e74c3c; text-decoration: none; font-size: 14px; }
     </style>
 </head>
 <body>
-    <div class="login-card" id="login-screen">
+
+    <div class="card" id="login-screen">
         <h2>منصة التاريخ والجغرافيا</h2>
         <p>الرجاء إدخال الرمز السري للولوج</p>
         <input type="password" id="passcode" placeholder="أدخل الرمز السري...">
         <button onclick="checkPassword()">دخول</button>
-        <a class="request-link" href="mailto:slimir334@gmail.com?subject=طلب الرمز السري&body=السلام عليكم أستاذ، أريد طلب الرمز السري. الاسم واللقب:">
-            طلب الرمز السري عبر البريد
-        </a>
+        <a class="request-link" href="mailto:slimir334@gmail.com?subject=طلب الرمز السري&body=أريد طلب الرمز السري للمنصة.">طلب الرمز السري عبر البريد</a>
+    </div>
+
+    <div class="card" id="main-content">
+        <h1>أهلاً بك في منصة التاريخ والجغرافيا</h1>
+        <p>دروس السنة الأولى ثانوي: يمكنك تحميل الوثائق والخرائط هنا.</p>
     </div>
 
     <script>
         function checkPassword() {
             if (document.getElementById('passcode').value === "a2017mrr") {
-                window.location.href = "resources.html";
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
             } else {
                 alert('الرمز السري غير صحيح.');
             }
