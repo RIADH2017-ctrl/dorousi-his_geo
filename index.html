@@ -20,7 +20,8 @@
         h3 { color: #4b5563; font-size: 15px; margin-top: 20px; text-align: right; }
         .btn { display: block; width: 100%; box-sizing: border-box; margin: 8px 0; background-color: #d97706; color: white; padding: 12px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; text-align: center; }
         .btn:hover { background-color: #b45309; }
-        .btn-library { background-color: #059669; }
+        .btn-map { background-color: #2980b9; }
+        .btn-map:hover { background-color: #1f618d; }
         .copyright-box { background-color: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 12px; border-radius: 6px; margin-top: 25px; font-size: 13px; text-align: right; line-height: 1.6; }
         .footer { margin-top: 20px; font-size: 13px; color: #777; }
         .request-link { display: block; margin-top: 15px; color: #e74c3c; font-size: 14px; text-decoration: none; }
@@ -42,8 +43,17 @@
         <h1>موقع الأستاذ رياض سليمي</h1>
         <p>الفضاء التربوي التفاعلي - التاريخ والجغرافيا</p>
 
-        <h2>مكتبة الموارد</h2>
-        <a href="resources.html" class="btn btn-library">🗂️ الدخول إلى مكتبة الخرائط والوثائق</a>
+        <h2>مكتبة الخرائط والوثائق (أطلس الخرائط)</h2>
+        <a href="map1.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الأولى (PDF)</a>
+        <a href="map2.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الثانية (PDF)</a>
+        <a href="map3.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الثالثة (PDF)</a>
+        <a href="map4.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الرابعة (PDF)</a>
+        <a href="map5.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الخامسة (PDF)</a>
+        <a href="map6.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة السادسة (PDF)</a>
+        <a href="map7.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة السابعة (PDF)</a>
+        <a href="map8.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الثامنة (PDF)</a>
+        <a href="map9.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة التاسعة (PDF)</a>
+        <a href="map10.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة العاشرة (PDF)</a>
 
         <h2>قسم السنة الأولى ثانوي</h2>
         
@@ -101,11 +111,12 @@
     </div>
 
     <script>
-        // قائمة الأكواد المسموح لها بالدخول
+        // الـ 20 رمزاً سرياً الجاهزة للتوزيع على الأقسام أو التلاميذ
         const allowedPasswords = [
-            "a2017mrr",  // الرمز الرئيسي
-            "med2026",   // رمز تلميذ
-            "mariam7a"   // رمز تلميذة
+            "A7b9X", "M2k4P", "Z8q1L", "R5w3N", "H6j2B", 
+            "C4v8K", "D1s7F", "G9h5T", "J3y6Q", "L2m4W",
+            "X5z1V", "B8c3R", "N7t9M", "Q4f2H", "K6d1S",
+            "P9l5J", "V2x7Z", "W3n8C", "F1r4G", "T6b2D"
         ];
 
         function checkPassword() {
@@ -114,13 +125,21 @@
             if (allowedPasswords.includes(enteredPass)) {
                 document.getElementById('login-screen').style.display = 'none';
                 document.getElementById('main-content').style.display = 'block';
+                localStorage.setItem("isLoggedIn", "true");
             } else {
                 alert('عذراً، هذا الرمز غير صحيح أو غير مفعل. يرجى مراجعة الأستاذ.');
             }
         }
+
+        // الحفاظ على حالة الدخول لكي لا يضطر التلميذ لإدخال الكود في كل مرة
+        if (localStorage.getItem("isLoggedIn") === "true") {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }
     </script>
 </body>
 </html>
+
 
 
 
