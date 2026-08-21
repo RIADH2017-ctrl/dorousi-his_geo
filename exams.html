@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قسم الامتحانات - الأستاذ رياض سليمي</title>
+    <style>
+        body { font-family: Tahoma, Arial, sans-serif; background-color: #f4f6f9; color: #333; text-align: center; padding: 30px 15px; margin: 0; }
+        .container { max-width: 700px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #1e3a8a; font-size: 22px; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; }
+        .btn { display: block; width: 100%; box-sizing: border-box; margin: 8px 0; background-color: #7c3aed; color: white; padding: 12px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; text-align: center; transition: 0.3s; }
+        .btn:hover { background-color: #6d28d9; }
+        .back-btn { display: inline-block; margin-top: 25px; background-color: #4b5563; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>قسم الامتحانات والاختبارات</h1>
+        <p>قائمة الامتحانات المتاحة للتحميل:</p>
+
+        <!-- روابط الامتحانات الـ 30 -->
+        <script>
+            for (let i = 1; i <= 30; i++) {
+                document.write(`<a href="exams${i}.pdf" class="btn" target="_blank">📄 تحميل الفرض/الامتحان رقم ${i}</a>`);
+            }
+        </script>
+
+        <a href="index.html" class="back-btn">⬅ العودة إلى الصفحة الرئيسية</a>
+    </div>
+</body>
+</html>
 
