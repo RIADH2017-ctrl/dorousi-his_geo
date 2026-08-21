@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع الأستاذ رياض سليمي - الفضاء التفاعلي</title>
+    <title>منصة الأستاذ رياض سليمي التعليمية</title>
     <style>
         body { font-family: Tahoma, Arial, sans-serif; background-color: #f4f6f9; color: #333; text-align: center; padding: 30px 15px; margin: 0; }
         .container { max-width: 700px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         
-        /* تنسيق شاشة القفل */
         #login-screen { padding: 40px 0; }
         #passcode { width: 100%; max-width: 300px; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px; text-align: center; font-size: 16px; }
         #login-btn { padding: 12px 30px; background-color: #1e3a8a; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
         
-        /* تنسيق المحتوى بعد الدخول */
         #main-content { display: none; }
         h1 { color: #1e3a8a; margin-bottom: 5px; font-size: 24px; }
         h2 { color: #2563eb; font-size: 18px; margin-top: 30px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px; text-align: right; }
         h3 { color: #4b5563; font-size: 15px; margin-top: 20px; text-align: right; }
-        .btn { display: block; width: 100%; box-sizing: border-box; margin: 8px 0; background-color: #d97706; color: white; padding: 12px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; text-align: center; }
+        
+        .btn { display: block; width: 100%; box-sizing: border-box; margin: 8px 0; background-color: #d97706; color: white; padding: 12px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; text-align: center; transition: 0.3s; }
         .btn:hover { background-color: #b45309; }
-        .btn-map { background-color: #2980b9; }
-        .btn-map:hover { background-color: #1f618d; }
+        .btn-library { background-color: #059669; font-size: 17px; padding: 15px; margin-bottom: 25px; }
+        
         .copyright-box { background-color: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 12px; border-radius: 6px; margin-top: 25px; font-size: 13px; text-align: right; line-height: 1.6; }
         .footer { margin-top: 20px; font-size: 13px; color: #777; }
         .request-link { display: block; margin-top: 15px; color: #e74c3c; font-size: 14px; text-decoration: none; }
@@ -32,28 +31,19 @@
     <!-- شاشة تسجيل الدخول -->
     <div class="container" id="login-screen">
         <h2>منصة الأستاذ رياض سليمي</h2>
-        <p>الرجاء إدخال الرمز السري الخاص بك للولوج إلى الفضاء التفاعلي</p>
+        <p>الرجاء إدخال الرمز السري للولوج إلى الفضاء التفاعلي</p>
         <input type="password" id="passcode" placeholder="أدخل رمزك السري هنا...">
         <button id="login-btn" onclick="checkPassword()">دخول للموقع</button>
-        <a class="request-link" href="mailto:slimir334@gmail.com?subject=طلب%20رمز%20دخول%20للمنصة&body=السلام%20عليكم%20أستاذ،%20أريد%20طلب%20رمز%20سري%20خاص.%0Aالاسم%20واللقب:%0Aالمستوى:%20الأولى%20ثانوي">لا تملك رمزاً خاصاً؟ اضغط هنا لطلبه عبر الإيميل</a>
+        <a class="request-link" href="mailto:slimir334@gmail.com?subject=طلب%20رمز%20دخول%20للمنصة">لا تملك رمزاً خاصاً؟ اضغط هنا لطلبه عبر الإيميل</a>
     </div>
 
-    <!-- المحتوى الفعلي (مخفي حتى يتم إدخال الرمز الصحيح) -->
+    <!-- المحتوى الفعلي للموقع -->
     <div class="container" id="main-content">
         <h1>موقع الأستاذ رياض سليمي</h1>
         <p>الفضاء التربوي التفاعلي - التاريخ والجغرافيا</p>
 
-        <h2>مكتبة الخرائط والوثائق (أطلس الخرائط)</h2>
-        <a href="map1.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الأولى (PDF)</a>
-        <a href="map2.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الثانية (PDF)</a>
-        <a href="map3.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الثالثة (PDF)</a>
-        <a href="map4.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الرابعة (PDF)</a>
-        <a href="map5.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الخامسة (PDF)</a>
-        <a href="map6.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة السادسة (PDF)</a>
-        <a href="map7.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة السابعة (PDF)</a>
-        <a href="map8.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة الثامنة (PDF)</a>
-        <a href="map9.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة التاسعة (PDF)</a>
-        <a href="map10.pdf" class="btn btn-map" target="_blank">🗺️ الخريطة العاشرة (PDF)</a>
+        <!-- زر مكتبة الخرائط المنفصل -->
+        <a href="resources.html" class="btn btn-library">📂 اضغط هنا لفتح مكتبة الخرائط والوثائق</a>
 
         <h2>قسم السنة الأولى ثانوي</h2>
         
@@ -71,7 +61,7 @@
         <a href="https://riadh2017-ctrl.github.io/Imaratmadinettounes/" class="btn">العهد الحفصي وعمارة مدينة تونس</a>
         <a href="https://riadh2017-ctrl.github.io/Ibnkaldoun/" class="btn">عبد الرحمن بن خلدون</a>
 
-        <h4 style="color: #1e3a8a; text-align: right; margin-top: 15px;">الوحدة الثالثة: البلاد التونسية من الإصلاح إلى التحديث (من القرن XIX إلى 1987)</h4>
+        <h4 style="color: #1e3a8a; text-align: right; margin-top: 20px;">الوحدة الثالثة: البلاد التونسية من الإصلاح إلى التحديث (من القرن XIX إلى 1987)</h4>
         <a href="#" class="btn">إضاءات حول تاريخ تونس في العصر الحديث</a>
         <a href="#" class="btn">الفكر الإصلاحي</a>
         <a href="#" class="btn">التجربة التونسية في مقاومة الاستعمار</a>
@@ -79,20 +69,21 @@
 
         <!-- دروس الجغرافيا -->
         <h3>دروس الجغرافيا:</h3>
-        <h4 style="color: #1e3a8a; text-align: right; margin-top: 15px;">الوحدة 1: الإنسان يعمر الأرض</h4>
+        
+        <h4 style="color: #1e3a8a; text-align: right; margin-top: 20px;">الوحدة 1: الإنسان يعمر الأرض</h4>
         <a href="https://riadh2017-ctrl.github.io/oulathanawigeo/" class="btn">التوزع الجغرافي للسكان</a>
         <a href="#" class="btn">الحركة الديمغرافية للسكان</a>
         <a href="#" class="btn">الحركة المجالية للسكان</a>
         <a href="#" class="btn">الانفجار الحضري</a>
         <a href="#" class="btn">تركيبة المدينة : دراسة حالة : القاهرة</a>
 
-        <h4 style="color: #1e3a8a; text-align: right; margin-top: 15px;">الوحدة 2: الإنسان يستثمر الموارد الطبيعية</h4>
+        <h4 style="color: #1e3a8a; text-align: right; margin-top: 20px;">الوحدة 2: الإنسان يستثمر الموارد الطبيعية</h4>
         <a href="#" class="btn">الموارد المائية وتوزعها الجغرافي</a>
         <a href="#" class="btn">تعبئة المياه ورهانات الماء</a>
         <a href="#" class="btn">الموارد النفطية: الإنتاج والاستهلاك والمبادلات</a>
         <a href="#" class="btn">رهانات النفط</a>
 
-        <h4 style="color: #1e3a8a; text-align: right; margin-top: 15px;">الوحدة 3: الإنسان والأوساط الطبيعية</h4>
+        <h4 style="color: #1e3a8a; text-align: right; margin-top: 20px;">الوحدة 3: الإنسان والأوساط الطبيعية</h4>
         <a href="#" class="btn">الإنسان والوسط الطبيعي</a>
         <a href="#" class="btn">من المخاطر إلى الكوارث: الزلازل والبراكين</a>
         <a href="#" class="btn">من المخاطر إلى الكوارث: الفيضانات</a>
@@ -111,7 +102,7 @@
     </div>
 
     <script>
-        // الـ 20 رمزاً سرياً الجاهزة للتوزيع على الأقسام أو التلاميذ
+        // الأكواد السرية الـ 20
         const allowedPasswords = [
             "A7b9X", "M2k4P", "Z8q1L", "R5w3N", "H6j2B", 
             "C4v8K", "D1s7F", "G9h5T", "J3y6Q", "L2m4W",
@@ -121,7 +112,6 @@
 
         function checkPassword() {
             const enteredPass = document.getElementById('passcode').value.trim();
-            
             if (allowedPasswords.includes(enteredPass)) {
                 document.getElementById('login-screen').style.display = 'none';
                 document.getElementById('main-content').style.display = 'block';
@@ -131,7 +121,6 @@
             }
         }
 
-        // الحفاظ على حالة الدخول لكي لا يضطر التلميذ لإدخال الكود في كل مرة
         if (localStorage.getItem("isLoggedIn") === "true") {
             document.getElementById('login-screen').style.display = 'none';
             document.getElementById('main-content').style.display = 'block';
@@ -139,6 +128,7 @@
     </script>
 </body>
 </html>
+
 
 
 
